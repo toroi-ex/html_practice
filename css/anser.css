@@ -1,0 +1,25 @@
+header {
+    margin-top: 30px;
+    color: #2e992e;
+}
+
+hr {
+    border-width: 3px;
+    border-color: #2e992e;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.align-right{
+    text-align: right;
+}
+
+@media only screen and (max-width: 992px){
+    .form-check-inline{
+        display: block;
+    }
+}

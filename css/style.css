@@ -1,0 +1,46 @@
+.content {
+    background-color:white;
+    width: 600px;
+    margin: 10px auto;
+    border: 1px solid gray;
+    padding: 30px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+}
+
+button{
+    width: 100%;
+    background-color: skyblue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 3px gray;
+}
+
+.req{
+    color: red;
+    font-size: 0.9em;
+    padding: 3px;
+    background-color: #ffeeee;
+    font-weight: bold;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+.control{
+    margin-bottom: 3em;
+}
+
+label{
+    display: block;
+}

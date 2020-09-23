@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/javaS.css">
+</head>
+
+<body>
+    <header>
+        <h1>Today</h1>
+    </header>
+    <div class="container">
+        <script>
+            var today = new Date();
+            var todayHtml = today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate();
+            document.write('<p class="date">' + todayHtml + "</p>");
+        </script>
+    </div>
+
+    
+</body>
+
+</html>
