@@ -19,6 +19,28 @@
     </div>
 
     <script>
+        var start;
+        var timer_id;
+
+        document.getElementById("start_stop").addEventListener
+        ("click", function () {
+            if (this.innerHTML === "START") {
+                start = new Date();
+
+                timer_id = setInterval(goTimer, 10);
+
+                this.innerHTML = "STOP";
+                this.classList.remove("btn-primary");
+                this.classList.add("btn-danger");
+            }
+            else {
+                clearInterval(timer_id);
+
+                this.innerHTML = "START";
+                this.classList.remove("btn-danger");
+                this.classList.add("btn-primary");
+            }
+        });
         var addZero = function (value) {
             if (value < 10) {
                 value = "0" + value;
@@ -26,23 +48,22 @@
             return value;
         }
 
-        document.getElementById("start_stop").addEventListener("click",
-            function() {
+        var goTimer = function () {
+            var now = new Date();
+            var mi = now.getTime() - start.getTime();
+            var se = Math.floor(mi / 1000);
+            var minu = Math.floor(se / 60);
+            var hours = Math.floor(minu / 60);
 
+            se = se - minu * 60;
+            minu = minu - hours * 60;
 
-                var now = new Date();
+            se = addZero(se);
+            minu = addZero(minu);
+            hours = addZero(hours);
 
-                var seconds = now.getSeconds();
-                seconds = addZero(seconds);
-
-                var minutes = now.getMinutes();
-                minutes = addZero(minutes);
-
-                var hours = now.getHours();
-                hours = addZero(hours);
-
-                document.getElementById('timer').innerHTML = hours + ":" + minutes + ":" + seconds;
-            });
+            document.getElementById("timer").innerHTML = hours + ":" + minu + ":" + se;
+        }
     </script>
 
 </body>
